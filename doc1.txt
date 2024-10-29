@@ -1,0 +1,31 @@
+package ejercicio1;
+
+import java.util.Scanner;
+
+public class ejercicio1 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Introduce un numero: ");
+        double numero = scanner.nextDouble();
+
+        System.out.print("Introduce otro numero: ");
+        double numero2 = scanner.nextDouble();
+
+        double resultadoFinal = numero + numero2;
+
+        System.out.println("La suma es: " + resultadoFinal);
+
+        // Verificar si los números son pares
+        System.out.println("El primer número es par: " + esPar(numero));
+        System.out.println("El segundo número es par: " + esPar(numero2));
+
+        scanner.close();
+    }
+
+    // Método que verifica si un número es par
+    public static boolean esPar(double numero) {
+        return numero % 2 == 0;
+    }
+}
